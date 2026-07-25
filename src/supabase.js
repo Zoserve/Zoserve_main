@@ -52,6 +52,10 @@ ${leadData.solve_details || "No details provided (Optional)"}
 }
 
 export async function insertLead(leadData) {
+    // 1. Trigger email notification first in the background (non-blocking)
+    sendEmailNotification(leadData);
+
+    // 2. Insert into Supabase leads table
     const url = `${SUPABASE_URL}/rest/v1/leads`;
     const response = await fetch(url, {
         method: "POST",
@@ -68,9 +72,6 @@ export async function insertLead(leadData) {
         const errorText = await response.text();
         throw new Error(errorText || "Failed to submit data to database");
     }
-
-    // Trigger email notification in the background
-    sendEmailNotification(leadData);
     
     return true;
 }
