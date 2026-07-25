@@ -1,26 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 450" fill="none">
-  <defs>
-    <linearGradient id="zoserveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0A84FF" />
-      <stop offset="100%" stop-color="#0052FF" />
-    </linearGradient>
-  </defs>
-
-  <g fill="url(#zoserveGrad)">
-    <!-- Top horizontal arm with right node -->
-    <path d="M 150 110 L 225 50 L 415 50 A 32 32 0 1 1 415 110 L 225 110 Z" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+    <defs>
+        <linearGradient id="codeBracketGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#2563EB" />
+            <stop offset="100%" stop-color="#3B82F6" />
+        </linearGradient>
+        <linearGradient id="serverRackGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#00D2FF" />
+            <stop offset="50%" stop-color="#10B981" />
+            <stop offset="100%" stop-color="#2563EB" />
+        </linearGradient>
+        <linearGradient id="coreNodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#10B981" />
+            <stop offset="100%" stop-color="#00D2FF" />
+        </linearGradient>
+    </defs>
     
-    <!-- Main central diagonal stroke -->
-    <polygon points="105,370 375,100 425,100 155,370" />
-
-    <!-- Bottom horizontal arm with left node -->
-    <path d="M 350 340 L 275 400 L 85 400 A 32 32 0 1 1 85 340 L 275 340 Z" />
-
-    <!-- Upper right accent blade -->
-    <polygon points="380,240 435,115 410,130 375,200" />
-  </g>
-  
-  <!-- Circle node inner cutouts -->
-  <circle cx="415" cy="80" r="16" fill="#0A0F1D" />
-  <circle cx="85" cy="370" r="16" fill="#0A0F1D" />
+    <!-- Code Brackets -->
+    <path d="M 36 24 L 18 50 L 36 76" stroke="url(#codeBracketGrad)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 64 24 L 82 50 L 64 76" stroke="url(#codeBracketGrad)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- Server lines -->
+    <path d="M 32 37 H 68" stroke="url(#serverRackGrad)" stroke-width="8" stroke-linecap="round" />
+    <path d="M 32 63 H 68" stroke="url(#serverRackGrad)" stroke-width="8" stroke-linecap="round" />
+    
+    <!-- Database Core node -->
+    <circle cx="50" cy="50" r="8.5" fill="url(#coreNodeGrad)" />
 </svg>
