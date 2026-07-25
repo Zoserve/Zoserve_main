@@ -10,41 +10,70 @@ export default function Logo({ className = "brand-logo", width = 36, height = 36
             style={{ width: `${width}px`, height: `${height}px` }}
         >
             <defs>
-                {/* Primary bright tech gradient: Deep Blue to Cyan */}
-                <linearGradient id="zoserveLogoPrimary" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#2563EB" />
-                    <stop offset="100%" stopColor="#00D2FF" />
+                {/* Tech gradients representing code logic and cloud service */}
+                <linearGradient id="codeBracketGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#2563EB" /> {/* Royal Blue */}
+                    <stop offset="100%" stopColor="#3B82F6" /> {/* Active Blue */}
                 </linearGradient>
                 
-                {/* Secondary accent gradient: Tech Emerald to Blue */}
-                <linearGradient id="zoserveLogoAccent" x1="100%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stopColor="#10B981" />
-                    <stop offset="100%" stopColor="#2563EB" />
+                <linearGradient id="serverRackGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stopColor="#00D2FF" /> {/* Cyan */}
+                    <stop offset="50%" stopColor="#10B981" /> {/* Emerald */}
+                    <stop offset="100%" stopColor="#2563EB" /> {/* Royal Blue */}
                 </linearGradient>
                 
-                {/* Soft drop shadow for visual elevation */}
-                <filter id="logoShadow" x="-10%" y="-10%" width="130%" height="130%">
-                    <feDropShadow dx="0" dy="3" stdDeviation="3" floodColor="#0F172A" floodOpacity="0.12" />
+                <linearGradient id="coreNodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#10B981" /> {/* Emerald */}
+                    <stop offset="100%" stopColor="#00D2FF" /> {/* Cyan */}
+                </linearGradient>
+
+                {/* Drop shadow for architectural depth */}
+                <filter id="symbolShadow" x="-10%" y="-10%" width="130%" height="130%">
+                    <feDropShadow dx="0" dy="3" stdDeviation="3" floodColor="#0F172A" floodOpacity="0.15" />
                 </filter>
             </defs>
             
-            {/* Outer geometric shield connection lines for tech authority */}
-            <g filter="url(#logoShadow)">
-                {/* Interlocking Z-S geometric ribbon */}
+            <g filter="url(#symbolShadow)">
+                {/* 1. Left Code Bracket (represents Custom Code & Software Development) */}
                 <path 
-                    d="M 20 28 C 20 23.58 23.58 20 28 20 H 72 C 76.42 20 80 23.58 80 28 L 80 34 C 80 36.2 78.8 38.2 77 39.2 L 33 60.8 C 31.2 61.8 30 63.8 30 66 L 30 72 C 30 76.42 33.58 80 38 80 H 72 C 76.42 80 80 76.42 80 72" 
-                    stroke="url(#zoserveLogoPrimary)" 
-                    strokeWidth="11" 
+                    d="M 36 24 L 18 50 L 36 76" 
+                    stroke="url(#codeBracketGrad)" 
+                    strokeWidth="9" 
                     strokeLinecap="round"
                     strokeLinejoin="round"
                 />
                 
-                {/* Glowing inner diagonal slash */}
+                {/* 2. Right Code Bracket (represents Custom Code & Delivery) */}
                 <path 
-                    d="M 77 39.2 L 33 60.8" 
-                    stroke="url(#zoserveLogoAccent)" 
-                    strokeWidth="7" 
+                    d="M 64 24 L 82 50 L 64 76" 
+                    stroke="url(#codeBracketGrad)" 
+                    strokeWidth="9" 
                     strokeLinecap="round"
+                    strokeLinejoin="round"
+                />
+                
+                {/* 3. Top Server Rack / Data Flow Line (represents Cloud Hosting & Infrastructure) */}
+                <path 
+                    d="M 32 37 H 68" 
+                    stroke="url(#serverRackGrad)" 
+                    strokeWidth="8" 
+                    strokeLinecap="round"
+                />
+                
+                {/* 4. Bottom Server Rack / Data Flow Line (represents Cloud Serving & Databases) */}
+                <path 
+                    d="M 32 63 H 68" 
+                    stroke="url(#serverRackGrad)" 
+                    strokeWidth="8" 
+                    strokeLinecap="round"
+                />
+                
+                {/* 5. Center Core Database Node (represents client data / central application logic) */}
+                <circle 
+                    cx="50" 
+                    cy="50" 
+                    r="8.5" 
+                    fill="url(#coreNodeGrad)" 
                 />
             </g>
         </svg>
