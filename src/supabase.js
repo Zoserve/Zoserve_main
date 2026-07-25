@@ -43,8 +43,12 @@ ${leadData.solve_details || "No details provided (Optional)"}
             body: JSON.stringify(payload)
         });
 
-        if (!response.ok) {
-            console.error("Failed to trigger Web3Forms email notification:", await response.text());
+        if (response.ok) {
+            const result = await response.json();
+            console.log("Web3Forms Email Sent Successfully:", result);
+        } else {
+            const errorBody = await response.text();
+            console.error("Web3Forms Email Failed to send:", errorBody);
         }
     } catch (e) {
         console.error("Error sending email notification:", e);
