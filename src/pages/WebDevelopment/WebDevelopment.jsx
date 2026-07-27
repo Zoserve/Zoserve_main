@@ -41,24 +41,36 @@ export default function WebDevelopment({ onOpenQuoteModal }) {
                         </div>
                     </div>
                     <div className="hero-visual animate-slide-right">
-                        <div className="visual-card">
+                        <div className="mock-browser">
                             <div className="visual-card-header">
                                 <span className="dot red"></span>
                                 <span className="dot yellow"></span>
                                 <span className="dot green"></span>
-                                <span className="card-title">zoserve_project_ownership.json</span>
+                                <span className="card-title">Live Website Builder Mockup</span>
                             </div>
-                            <div className="visual-card-body">
-                                <pre><code>{`{
-  "project": "Custom React Website",
-  "github_repository": "Transferred to Client",
-  "dns_settings": "Configured & Handed Over",
-  "walkthrough_tutorials": "Delivered",
-  "vendor_dependency": "0%"
-}`}</code></pre>
+                            <div className="mock-canvas">
+                                <div className="mock-nav">
+                                    <div className="mock-nav-logo"></div>
+                                    <div className="mock-nav-links">
+                                        <div className="mock-nav-link"></div>
+                                        <div className="mock-nav-link"></div>
+                                        <div className="mock-nav-link"></div>
+                                    </div>
+                                </div>
+                                <div className="mock-main">
+                                    <div className="mock-text-group">
+                                        <div className="mock-title-bar-1"></div>
+                                        <div className="mock-title-bar-2"></div>
+                                        <div className="mock-desc-bar"></div>
+                                        <div className="mock-btn"></div>
+                                    </div>
+                                    <div className="mock-visual-box">
+                                        <div className="mock-visual-inner"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div className="badge-card floating-badge">
+                        <div className="badge-card floating-badge" style={{ zIndex: 10 }}>
                             <span className="material-symbols-outlined icon-green">verified_user</span>
                             <div className="badge-text">
                                 <span className="badge-title">No Lock-In</span>
