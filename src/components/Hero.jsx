@@ -31,59 +31,76 @@ export default function Hero({ onOpenQuoteModal }) {
                     </div>
                 </div>
                 <div className="hero-visual animate-slide-right">
-                    <div className="isometric-container">
-                        {/* Layer 1: Top (Frontend UI/Client View) */}
-                        <div className="iso-layer iso-layer-top">
-                            <div className="iso-card-header">
+                    <div className="handover-dashboard">
+                        <div className="dashboard-header">
+                            <div className="flex gap-1.5">
                                 <span className="dot red"></span>
                                 <span className="dot yellow"></span>
                                 <span className="dot green"></span>
-                                <span>Frontend UI Layer</span>
                             </div>
-                            <div className="iso-card-body">
-                                <div className="mock-ui-header">
-                                    <div className="mock-ui-logo"></div>
-                                    <div className="mock-ui-nav"></div>
-                                </div>
-                                <div className="mock-ui-hero-banner"></div>
-                                <div className="mock-ui-grid">
-                                    <div className="mock-ui-item"></div>
-                                    <div className="mock-ui-item"></div>
-                                </div>
-                            </div>
+                            <span className="dashboard-title">zoserve_handover_portal_v2.0</span>
                         </div>
-
-                        {/* Layer 2: Middle (Clean Source Code) */}
-                        <div className="iso-layer iso-layer-middle">
-                            <div className="iso-card-header">
-                                <span className="material-symbols-outlined text-[12px] text-cyan-400">code</span>
-                                <span>src/components/App.jsx</span>
+                        <div className="dashboard-body">
+                            {/* Dashboard Stats */}
+                            <div className="dashboard-stats">
+                                <div className="stat-box">
+                                    <span className="stat-val blue">148</span>
+                                    <span className="stat-lbl">Files</span>
+                                </div>
+                                <div className="stat-box">
+                                    <span className="stat-val green">100%</span>
+                                    <span className="stat-lbl">Own</span>
+                                </div>
+                                <div className="stat-box">
+                                    <span className="stat-val red">0%</span>
+                                    <span className="stat-lbl">Lock-in</span>
+                                </div>
                             </div>
-                            <div className="iso-card-body code-font">
-                                <span className="code-line text-blue-400">import React from 'react';</span>
-                                <span className="code-line text-green-400">const ZoserveApp = () =&gt; &#123;</span>
-                                <span className="code-line text-accent pl-4">return &lt;OwnYourSoftware /&gt;;</span>
-                                <span className="code-line text-green-400">&#125;;</span>
-                                <span className="code-line text-blue-400">export default ZoserveApp;</span>
+                            
+                            {/* Transfer List */}
+                            <div className="transfer-list">
+                                <div className="transfer-row">
+                                    <div className="transfer-info">
+                                        <span className="material-symbols-outlined transfer-icon">code</span>
+                                        <span className="transfer-file">zoserve_core.git</span>
+                                    </div>
+                                    <div className="transfer-status">
+                                        <span className="pulse-dot"></span>
+                                        <span>Transferred</span>
+                                    </div>
+                                </div>
+                                <div className="transfer-row" style={{ borderLeftColor: '#3B82F6' }}>
+                                    <div className="transfer-info">
+                                        <span className="material-symbols-outlined transfer-icon">menu_book</span>
+                                        <span className="transfer-file">handover_manifest.pdf</span>
+                                    </div>
+                                    <div className="transfer-status" style={{ color: '#3B82F6' }}>
+                                        <span className="pulse-dot" style={{ background: '#3B82F6', boxShadow: '0 0 8px #3B82F6' }}></span>
+                                        <span>Delivered</span>
+                                    </div>
+                                </div>
+                                <div className="transfer-row" style={{ borderLeftColor: '#00D2FF' }}>
+                                    <div className="transfer-info">
+                                        <span className="material-symbols-outlined transfer-icon">database</span>
+                                        <span className="transfer-file">production_db.sql</span>
+                                    </div>
+                                    <div className="transfer-status" style={{ color: '#00D2FF' }}>
+                                        <span className="pulse-dot" style={{ background: '#00D2FF', boxShadow: '0 0 8px #00D2FF' }}></span>
+                                        <span>Migrated</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-
-                        {/* Layer 3: Bottom (Independent Database Config) */}
-                        <div className="iso-layer iso-layer-bottom">
-                            <div className="iso-card-header">
-                                <span className="material-symbols-outlined text-[12px] text-emerald-400">database</span>
-                                <span>database_config.json</span>
-                            </div>
-                            <div className="iso-card-body code-font">
-                                <span className="code-line text-emerald-400">&#123;</span>
-                                <span className="code-line pl-4">"ownership": "100% Client",</span>
-                                <span className="code-line pl-4 text-cyan-400">"vendor_lock_in": false,</span>
-                                <span className="code-line pl-4">"open_source": true</span>
-                                <span className="code-line text-emerald-400">&#125;</span>
+                            
+                            {/* Success Banner */}
+                            <div className="transfer-success-banner">
+                                <span className="material-symbols-outlined icon-green" style={{ fontSize: '20px' }}>verified</span>
+                                <span className="success-msg">
+                                    All source code, documentation, database credentials successfully handed over to client.
+                                </span>
                             </div>
                         </div>
                     </div>
-                    <div className="badge-card floating-badge" style={{ zIndex: 20 }}>
+                    <div className="badge-card floating-badge" style={{ zIndex: 10 }}>
                         <span className="material-symbols-outlined icon-green">verified_user</span>
                         <div className="badge-text">
                             <span className="badge-title">Full Ownership</span>

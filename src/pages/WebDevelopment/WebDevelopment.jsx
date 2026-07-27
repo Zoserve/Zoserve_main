@@ -40,68 +40,67 @@ export default function WebDevelopment({ onOpenQuoteModal }) {
                             </a>
                         </div>
                     </div>
-                    <div className="hero-visual animate-slide-right">
-                        <div className="isometric-container web-dev-stack">
-                            {/* Layer 1: Top (Rendered App UI View) */}
-                            <div className="iso-layer iso-layer-top">
-                                <div className="iso-card-header">
+                    <div className="hero-visual animate-slide-right" style={{ maxWidth: '520px' }}>
+                        <div className="compiler-container">
+                            {/* Left Panel: IDE Window */}
+                            <div className="ide-window">
+                                <div className="ide-header">
                                     <span className="dot red"></span>
                                     <span className="dot yellow"></span>
                                     <span className="dot green"></span>
-                                    <span>Production Application</span>
+                                    <span style={{ fontSize: '0.65rem', color: 'rgba(255,255,255,0.4)', marginLeft: '10px', fontFamily: 'monospace' }}>Editor.jsx</span>
                                 </div>
-                                <div className="iso-card-body">
-                                    <div className="mock-ui-header">
-                                        <div className="mock-ui-logo" style={{ background: 'var(--color-accent)' }}></div>
-                                        <div className="mock-ui-nav" style={{ width: '40px' }}></div>
+                                <div className="ide-body">
+                                    <div className="code-row">
+                                        <span className="line-no">1</span>
+                                        <span><span className="syn-tag">const</span> <span className="syn-attr">WebPage</span> = () =&gt; &#123;</span>
                                     </div>
-                                    <div className="mock-ui-hero-banner" style={{ background: 'rgba(46, 212, 122, 0.2)', border: '1px solid var(--color-accent)' }}></div>
-                                    <div className="mock-ui-grid">
-                                        <div className="mock-ui-item" style={{ height: '24px' }}></div>
-                                        <div className="mock-ui-item" style={{ height: '24px' }}></div>
+                                    <div className="code-row">
+                                        <span className="line-no">2</span>
+                                        <span className="pl-4"><span className="syn-tag">return</span> (</span>
+                                    </div>
+                                    <div className="code-row">
+                                        <span className="line-no">3</span>
+                                        <span className="pl-8">&lt;<span className="syn-tag">HeroSection</span>&gt;</span>
+                                    </div>
+                                    <div className="code-row">
+                                        <span className="line-no">4</span>
+                                        <span className="pl-12">&lt;<span className="syn-tag">Title</span>&gt;<span className="syn-text">Websites That Belong To You</span>&lt;/<span className="syn-tag">Title</span>&gt;</span>
+                                    </div>
+                                    <div className="code-row">
+                                        <span className="line-no">5</span>
+                                        <span className="pl-12">&lt;<span className="syn-tag">Button</span> <span className="syn-attr">color</span>=<span className="syn-val">"mint"</span> /&gt;<span className="typing-cursor"></span></span>
+                                    </div>
+                                    <div className="code-row">
+                                        <span className="line-no">6</span>
+                                        <span className="pl-8">&lt;/<span className="syn-tag">HeroSection</span>&gt;</span>
+                                    </div>
+                                    <div className="code-row">
+                                        <span className="line-no">7</span>
+                                        <span className="pl-4">);</span>
+                                    </div>
+                                    <div className="code-row">
+                                        <span className="line-no">8</span>
+                                        <span>&#125;;</span>
                                     </div>
                                 </div>
                             </div>
 
-                            {/* Layer 2: Middle (Wireframe Grid Layout) */}
-                            <div className="iso-layer iso-layer-middle">
-                                <div className="iso-card-header">
-                                    <span className="material-symbols-outlined text-[12px] text-cyan-400">grid_on</span>
-                                    <span>wireframe_grid.layout</span>
-                                </div>
-                                <div className="iso-card-body" style={{ padding: '8px' }}>
-                                    <div className="wireframe-grid-canvas">
-                                        <div className="wireframe-header"></div>
-                                        <div className="wireframe-banner"></div>
-                                        <div className="wireframe-columns">
-                                            <div></div>
-                                            <div></div>
-                                            <div></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            {/* Center Connecting Beam */}
+                            <div className="compiler-beam"></div>
 
-                            {/* Layer 3: Bottom (Server Infrastructure / Data Nodes) */}
-                            <div className="iso-layer iso-layer-bottom">
-                                <div className="iso-card-header">
-                                    <span className="material-symbols-outlined text-[12px] text-emerald-400">cloud_done</span>
-                                    <span>hosting_servers.config</span>
-                                </div>
-                                <div className="iso-card-body">
-                                    <div className="server-cylinders">
-                                        <div className="server-cyl">
-                                            <div className="cyl-top"></div>
-                                            <div className="cyl-body"></div>
-                                        </div>
-                                        <div className="server-cyl">
-                                            <div className="cyl-top"></div>
-                                            <div className="cyl-body"></div>
-                                        </div>
-                                        <div className="server-cyl">
-                                            <div className="cyl-top"></div>
-                                            <div className="cyl-body"></div>
-                                        </div>
+                            {/* Right Panel: Phone Viewport */}
+                            <div className="phone-viewport">
+                                <div className="phone-screen">
+                                    <div className="phone-header">
+                                        <div className="phone-logo"></div>
+                                        <span className="material-symbols-outlined text-[8px] text-gray-500">battery_full</span>
+                                    </div>
+                                    <div className="phone-body">
+                                        <div className="phone-hero-title"></div>
+                                        <div className="phone-hero-sub"></div>
+                                        <div className="phone-hero-btn"></div>
+                                        <div className="phone-hero-image"></div>
                                     </div>
                                 </div>
                             </div>
