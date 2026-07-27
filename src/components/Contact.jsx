@@ -183,9 +183,9 @@ export default function Contact() {
                     <div className="contact-alternatives">
                         <span className="alternative-text">Or reach out directly:</span>
                         <div className="alternative-links">
-                            <a href="mailto:info@zoserve.com" className="alt-link">
+                            <a href="mailto:service@zoserve.com" className="alt-link">
                                 <span className="material-symbols-outlined text-[20px]">mail</span>
-                                <span>info@zoserve.com</span>
+                                <span>service@zoserve.com</span>
                             </a>
                             <a href="https://wa.me/919976184318" target="_blank" rel="noopener noreferrer" className="alt-link">
                                 <span className="material-symbols-outlined text-[20px]">chat</span>

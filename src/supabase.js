@@ -1,7 +1,7 @@
 export const SUPABASE_URL = "https://lmjyjpdbmmvnwocuabgw.supabase.co";
 export const SUPABASE_KEY = "sb_publishable_mkvDgZfdEGYobvORJ9wEyw_1nV07MTp";
 
-export const WEB3FORMS_KEY = "12a389b2-ddc6-4150-ac3a-777cd84a8f5e";
+export const WEB3FORMS_KEY = "ed66098c-3657-4861-b730-540a96386cab";
 
 export async function sendEmailNotification(leadData) {
     if (!WEB3FORMS_KEY || WEB3FORMS_KEY === "YOUR_WEB3FORMS_KEY") {

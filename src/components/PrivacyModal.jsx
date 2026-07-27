@@ -74,7 +74,7 @@ export default function PrivacyModal({ isOpen, onClose }) {
 
                     <h3 className="privacy-h3">Your Rights</h3>
                     <p className="mb-4">
-                        You can request to see, correct, or delete any personal information we hold about you at any time by contacting us at <a href="mailto:info@zoserve.com" className="text-primary font-medium">info@zoserve.com</a>.
+                        You can request to see, correct, or delete any personal information we hold about you at any time by contacting us at <a href="mailto:service@zoserve.com" className="text-primary font-medium">service@zoserve.com</a>.
                     </p>
 
                     <h3 className="privacy-h3">Changes to This Policy</h3>
@@ -84,7 +84,7 @@ export default function PrivacyModal({ isOpen, onClose }) {
 
                     <h3 className="privacy-h3">Contact Us</h3>
                     <p className="mb-4">
-                        If you have questions about this policy, reach out at <a href="mailto:info@zoserve.com" className="text-primary font-medium">info@zoserve.com</a>.
+                        If you have questions about this policy, reach out at <a href="mailto:service@zoserve.com" className="text-primary font-medium">service@zoserve.com</a>.
                     </p>
 
                     <div className="text-right mt-6">
