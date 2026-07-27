@@ -41,36 +41,72 @@ export default function WebDevelopment({ onOpenQuoteModal }) {
                         </div>
                     </div>
                     <div className="hero-visual animate-slide-right">
-                        <div className="mock-browser">
-                            <div className="visual-card-header">
-                                <span className="dot red"></span>
-                                <span className="dot yellow"></span>
-                                <span className="dot green"></span>
-                                <span className="card-title">Live Website Builder Mockup</span>
-                            </div>
-                            <div className="mock-canvas">
-                                <div className="mock-nav">
-                                    <div className="mock-nav-logo"></div>
-                                    <div className="mock-nav-links">
-                                        <div className="mock-nav-link"></div>
-                                        <div className="mock-nav-link"></div>
-                                        <div className="mock-nav-link"></div>
+                        <div className="isometric-container web-dev-stack">
+                            {/* Layer 1: Top (Rendered App UI View) */}
+                            <div className="iso-layer iso-layer-top">
+                                <div className="iso-card-header">
+                                    <span className="dot red"></span>
+                                    <span className="dot yellow"></span>
+                                    <span className="dot green"></span>
+                                    <span>Production Application</span>
+                                </div>
+                                <div className="iso-card-body">
+                                    <div className="mock-ui-header">
+                                        <div className="mock-ui-logo" style={{ background: 'var(--color-accent)' }}></div>
+                                        <div className="mock-ui-nav" style={{ width: '40px' }}></div>
+                                    </div>
+                                    <div className="mock-ui-hero-banner" style={{ background: 'rgba(46, 212, 122, 0.2)', border: '1px solid var(--color-accent)' }}></div>
+                                    <div className="mock-ui-grid">
+                                        <div className="mock-ui-item" style={{ height: '24px' }}></div>
+                                        <div className="mock-ui-item" style={{ height: '24px' }}></div>
                                     </div>
                                 </div>
-                                <div className="mock-main">
-                                    <div className="mock-text-group">
-                                        <div className="mock-title-bar-1"></div>
-                                        <div className="mock-title-bar-2"></div>
-                                        <div className="mock-desc-bar"></div>
-                                        <div className="mock-btn"></div>
+                            </div>
+
+                            {/* Layer 2: Middle (Wireframe Grid Layout) */}
+                            <div className="iso-layer iso-layer-middle">
+                                <div className="iso-card-header">
+                                    <span className="material-symbols-outlined text-[12px] text-cyan-400">grid_on</span>
+                                    <span>wireframe_grid.layout</span>
+                                </div>
+                                <div className="iso-card-body" style={{ padding: '8px' }}>
+                                    <div className="wireframe-grid-canvas">
+                                        <div className="wireframe-header"></div>
+                                        <div className="wireframe-banner"></div>
+                                        <div className="wireframe-columns">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
                                     </div>
-                                    <div className="mock-visual-box">
-                                        <div className="mock-visual-inner"></div>
+                                </div>
+                            </div>
+
+                            {/* Layer 3: Bottom (Server Infrastructure / Data Nodes) */}
+                            <div className="iso-layer iso-layer-bottom">
+                                <div className="iso-card-header">
+                                    <span className="material-symbols-outlined text-[12px] text-emerald-400">cloud_done</span>
+                                    <span>hosting_servers.config</span>
+                                </div>
+                                <div className="iso-card-body">
+                                    <div className="server-cylinders">
+                                        <div className="server-cyl">
+                                            <div className="cyl-top"></div>
+                                            <div className="cyl-body"></div>
+                                        </div>
+                                        <div className="server-cyl">
+                                            <div className="cyl-top"></div>
+                                            <div className="cyl-body"></div>
+                                        </div>
+                                        <div className="server-cyl">
+                                            <div className="cyl-top"></div>
+                                            <div className="cyl-body"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="badge-card floating-badge" style={{ zIndex: 10 }}>
+                        <div className="badge-card floating-badge" style={{ zIndex: 20 }}>
                             <span className="material-symbols-outlined icon-green">verified_user</span>
                             <div className="badge-text">
                                 <span className="badge-title">No Lock-In</span>
