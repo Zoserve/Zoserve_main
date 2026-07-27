@@ -1666,3 +1666,26 @@ pre, code {
     font-weight: 500;
 }
 
+.service-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-top: 12px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+    text-align: left;
+    text-decoration: none;
+}
+
+.service-more-btn:hover {
+    color: var(--color-accent-hover) !important;
+    transform: translateX(3px);
+}
+
+

@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import Logo from './Logo';
 
 export default function Footer({ onOpenPrivacyModal }) {
@@ -6,11 +6,11 @@ export default function Footer({ onOpenPrivacyModal }) {
         <footer className="footer">
             <div className="container footer-container animate-on-scroll">
                 <div className="footer-brand">
-                    <a href="#" className="brand-wrapper text-white">
+                    <Link to="/" className="brand-wrapper text-white">
                         <Logo width={36} height={36} />
                         <span className="logo text-white">Zo<span className="logo-accent">serve</span></span>
-                    </a>
-                    <p className="footer-tagline">Engineering digital independence. We build software you understand and own — forever.</p>
+                    </Link>
+                    <p className="footer-tagline">Engineering digital independence. We build software that you understand and own forever.</p>
                 </div>
                 
                 <div className="footer-links-grid">

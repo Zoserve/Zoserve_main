@@ -1,20 +1,27 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import WhoWeWorkWith from './components/WhoWeWorkWith';
-import Problem from './components/Problem';
-import HowWeAreDifferent from './components/HowWeAreDifferent';
-import Services from './components/Services';
-import Pricing from './components/Pricing';
-import FAQ from './components/FAQ';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
 import QuoteModal from './components/QuoteModal';
 import PrivacyModal from './components/PrivacyModal';
 import useAnimateOnScroll from './hooks/useAnimateOnScroll';
 
-function App() {
-    const containerRef = useAnimateOnScroll();
+// Pages
+import Home from './pages/Home/Home';
+import WebDevelopment from './pages/WebDevelopment/WebDevelopment';
+
+// Helper to scroll to top on routing changes
+function ScrollToTop() {
+    const { pathname } = useLocation();
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+    return null;
+}
+
+function AppContent() {
+    const location = useLocation();
+    const containerRef = useAnimateOnScroll(location.pathname);
     const [quoteModalOpen, setQuoteModalOpen] = useState(false);
     const [selectedService, setSelectedService] = useState('Other');
     const [privacyModalOpen, setPrivacyModalOpen] = useState(false);
@@ -49,18 +56,24 @@ function App() {
     };
 
     return (
-        <div ref={containerRef}>
+        <div ref={containerRef} className="min-h-screen flex flex-col">
+            <ScrollToTop />
+            
+            {/* Global Header */}
             <Header onOpenQuoteModal={handleOpenQuoteModal} />
-            <Hero onOpenQuoteModal={handleOpenQuoteModal} />
-            <WhoWeWorkWith />
-            <Problem />
-            <HowWeAreDifferent />
-            <Services />
-            <Pricing onOpenQuoteModal={handleOpenQuoteModal} />
-            <FAQ />
-            <Contact />
+            
+            {/* Page Router */}
+            <main className="flex-grow">
+                <Routes>
+                    <Route path="/" element={<Home onOpenQuoteModal={handleOpenQuoteModal} />} />
+                    <Route path="/web-development" element={<WebDevelopment onOpenQuoteModal={handleOpenQuoteModal} />} />
+                </Routes>
+            </main>
+            
+            {/* Global Footer */}
             <Footer onOpenPrivacyModal={handleOpenPrivacyModal} />
 
+            {/* Global Modals */}
             <QuoteModal 
                 isOpen={quoteModalOpen} 
                 onClose={handleCloseQuoteModal} 
@@ -72,6 +85,14 @@ function App() {
                 onClose={handleClosePrivacyModal}
             />
         </div>
+    );
+}
+
+function App() {
+    return (
+        <Router>
+            <AppContent />
+        </Router>
     );
 }
 

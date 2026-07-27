@@ -18,7 +18,7 @@ export default function Hero({ onOpenQuoteModal }) {
                         <span className="highlight-text">Zero Lock-In.</span>
                     </h1>
                     <p className="hero-subtitle">
-                        We build web apps, mobile apps, and SaaS tools at fair prices — with full documentation, so you understand and own everything we build for you.
+                        We build web apps, mobile apps, and SaaS tools at fair prices with full documentation so you understand and own everything we build for you.
                     </p>
                     <div className="hero-cta-wrapper">
                         <button onClick={handleCtaClick} className="btn btn-primary hero-btn border-none cursor-pointer">

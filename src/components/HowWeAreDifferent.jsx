@@ -8,10 +8,10 @@ export default function HowWeAreDifferent() {
                     <span className="section-tagline tag-white">Why Us</span>
                     <h2 className="section-title text-white">Software Shouldn't Cost More Just Because AI Made It Easier to Build</h2>
                     <p className="section-body text-light text-center-max-width mb-4">
-                        AI made development faster — but most agencies never passed the savings on. They still charge premium rates for basic work. We think that gap should close, not widen, so Zoserve prices fairly and stays lean.
+                        AI has made development faster, but most agencies have not passed the savings on. They still charge premium rates for basic work. We believe that gap should close, which is why Zoserve prices fairly and stays lean.
                     </p>
                     <p className="section-body text-light text-center-max-width mt-3">
-                        It goes deeper than price, though. We want you to understand what we build, down to the small features, so you're never stuck depending on us. The more you know about your own product, the less you need us — or anyone.
+                        It goes deeper than price, however. We want you to understand what we build, down to the smallest features, so you are never dependent on us. The more you know about your own product, the less you need us or anyone else.
                     </p>
                 </div>
                 <div className="different-grid">
