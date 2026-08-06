@@ -9,6 +9,7 @@ import useAnimateOnScroll from './hooks/useAnimateOnScroll';
 // Pages
 import Home from './pages/Home/Home';
 import WebDevelopment from './pages/WebDevelopment/WebDevelopment';
+import AIDevelopment from './pages/AIDevelopment/AIDevelopment';
 
 // Helper to scroll to top on routing changes
 function ScrollToTop() {
@@ -67,6 +68,7 @@ function AppContent() {
                 <Routes>
                     <Route path="/" element={<Home onOpenQuoteModal={handleOpenQuoteModal} />} />
                     <Route path="/web-development" element={<WebDevelopment onOpenQuoteModal={handleOpenQuoteModal} />} />
+                    <Route path="/ai-development" element={<AIDevelopment onOpenQuoteModal={handleOpenQuoteModal} />} />
                 </Routes>
             </main>
             

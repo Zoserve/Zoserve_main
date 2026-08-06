@@ -52,6 +52,18 @@ export default function Services({ onOpenQuoteModal }) {
                             </button>
                         </div>
                     </div>
+
+                    {/* Card 4: AI Development */}
+                    <div className="service-card animate-on-scroll delay-400">
+                        <span className="material-symbols-outlined service-icon">smart_toy</span>
+                        <div className="service-content">
+                            <h3 className="service-title">AI Development</h3>
+                            <p className="service-desc">Custom AI agents, LLM integrations, and automated workflows.</p>
+                            <Link to="/ai-development" className="service-more-btn">
+                                More Details <span className="material-symbols-outlined text-[14px]">arrow_forward</span>
+                            </Link>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

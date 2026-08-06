@@ -2096,6 +2096,232 @@ pre, code {
     }
 }
 
+/* --- AI Development: Prompt-to-Agent Sandbox --- */
+.ai-sandbox-container {
+    width: 100%;
+    max-width: 520px;
+    position: relative;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* Left panel: Prompt input */
+.ai-prompt-box {
+    flex: 1.1;
+    background: #0B0F19;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.prompt-header {
+    height: 28px;
+    background: rgba(15, 23, 42, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    gap: 6px;
+}
+
+.prompt-label {
+    font-size: 0.65rem;
+    color: rgba(255, 255, 255, 0.4);
+    margin-left: 10px;
+    font-family: monospace;
+}
+
+.prompt-body {
+    padding: 16px;
+    font-size: 0.8125rem;
+    font-family: Consolas, Monaco, monospace;
+    color: #F8FAFC;
+    flex-grow: 1;
+    display: flex;
+    gap: 8px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.prompt-symbol {
+    color: var(--color-accent);
+    user-select: none;
+}
+
+.prompt-text-live {
+    color: #E2E8F0;
+}
+
+/* Center Active Flowing Beam */
+.ai-flow-beam {
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-accent), transparent);
+    top: 50%;
+    left: 45%;
+    transform: translateY(-50%);
+    z-index: 10;
+    pointer-events: none;
+}
+
+.pulse-particle {
+    width: 6px;
+    height: 6px;
+    background: var(--color-accent);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--color-accent);
+    animation: particleTravel 2s infinite linear;
+}
+
+@keyframes particleTravel {
+    0% {
+        transform: translate(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(50px);
+        opacity: 0;
+    }
+}
+
+/* Right panel: Agent Reasoning Console */
+.ai-console-box {
+    flex: 1.3;
+    background: #090D16;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    height: 240px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    animation: consoleFloat 6s ease-in-out infinite;
+}
+
+@keyframes consoleFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+.console-header {
+    height: 28px;
+    background: rgba(15, 23, 42, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    gap: 6px;
+    font-size: 0.65rem;
+    color: rgba(255, 255, 255, 0.4);
+    font-family: monospace;
+}
+
+.console-icon {
+    font-size: 10px !important;
+}
+
+.console-body {
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 28px);
+}
+
+.console-logs {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-family: monospace;
+    font-size: 0.65rem;
+    text-align: left;
+}
+
+.log-row {
+    display: flex;
+    gap: 8px;
+}
+
+.log-time {
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.log-msg {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Visual Neural Grid */
+.neural-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.02);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.neural-node {
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    position: relative;
+}
+
+.neural-node.active {
+    background: var(--color-accent);
+    box-shadow: 0 0 10px var(--color-accent);
+    animation: nodePulse 2s infinite ease-in-out;
+}
+
+@keyframes nodePulse {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.3); opacity: 1; }
+}
+
+/* Responsive AI Sandbox */
+@media (max-width: 991px) {
+    .ai-sandbox-container {
+        transform: scale(0.9);
+    }
+}
+@media (max-width: 580px) {
+    .ai-sandbox-container {
+        flex-direction: column;
+        gap: 20px;
+        height: auto;
+        transform: scale(1);
+    }
+    .ai-flow-beam {
+        display: none;
+    }
+    .ai-prompt-box {
+        width: 100%;
+        height: 140px;
+    }
+    .ai-console-box {
+        width: 100%;
+        height: 200px;
+    }
+}
+
 
 
 
