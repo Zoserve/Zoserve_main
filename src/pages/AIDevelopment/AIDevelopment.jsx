@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight } from 'lucide-react';
 
 export default function AIDevelopment({ onOpenQuoteModal }) {
     const handleCtaClick = (e, service = 'SaaS Tool Development') => {
